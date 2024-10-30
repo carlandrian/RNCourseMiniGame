@@ -8,6 +8,7 @@ import Colors from './constants/colors'
 import AndroidSafeAreaView from './components/ui/AndroidSafeArea';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import { StatusBar} from 'expo-status-bar';
 
 export default function App() {
   const [ userNumber, setUserNumber ] = useState();
@@ -52,6 +53,8 @@ export default function App() {
   
  
   return (
+    <>
+    <StatusBar style='light'></StatusBar>
     <LinearGradient 
       colors={[Colors.primary700, Colors.accent500]} 
       style={styles.rootScreen}
@@ -69,6 +72,7 @@ export default function App() {
         </AndroidSafeAreaView>
       </ImageBackground>
     </LinearGradient>
+    </>
   );
 }
 
